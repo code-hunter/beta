@@ -1,0 +1,32 @@
+
+<div ng-repeat="doc in docs">
+    <div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="">
+                    <img alt="{{doc.title}}" ng-click="onPlay(doc.id)" ng-src="{{doc.thumbnail}}">
+                </div>
+                <div class="">
+                    <a title="{{doc.title}}", target="_blank" href="#/home/playing/{{doc.id}}" >{{doc.title}}</a>
+                </div>
+                <div class="">
+                    <span>
+                        <a target="_blank" href="{{doc.user.link}}">{{doc.user.name}}</a>
+                    </span>
+                </div>
+                <div class="">
+                    <span>{{doc.view_count}}</span>
+                    <span>{{doc.published}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+
+<ul class="pager">
+    <li class="next">
+        <a href="#" ng-click="on_next()">Older Posts &rarr;</a>
+    </li>
+</ul>
