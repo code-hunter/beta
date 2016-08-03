@@ -23,4 +23,28 @@ router.get('/getPage', function (req, res, next) {
     )
 })
 
+router.get('/getInfo', function (req, res, next) {
+    var videoId = req.query.id
+
+    httpHelper.get('https://openapi.youku.com/v2/videos/show_basic.json?client_id=3a2c6e512d0fd485&video_id=' + videoId,
+        1000,
+        function (err, data) {
+            console.log(data);
+            res.send(data);
+        }
+    )
+})
+
+router.get('/getComments', function (req, res, next) {
+    var videoId = req.query.id
+
+    httpHelper.get('https://openapi.youku.com/v2/comments/by_video.json?client_id=3a2c6e512d0fd485&video_id=' + videoId,
+        1000,
+        function (err, data) {
+            console.log(data);
+            res.send(data);
+        }
+    )
+})
+
 module.exports = router;

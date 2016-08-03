@@ -90,3 +90,84 @@ footer .copyright {
 footer.scrolled {
     background-color: rgba(0,0,0, 0.85)
 }
+
+.video {
+
+}
+
+.video:hover{
+    cursor:pointer;
+    /*background: url(../img/player.png);*/
+    /*z-index: 100;*/
+}
+
+.content-wrap {
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 205px;
+    height: 105px;
+    top: 15px;
+    bottom: 0;
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.content-play-wrap {
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    height: 85px;
+    bottom: 0;
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.content-play-wrap h1.entry-title {
+    display: table;
+    font-size: 110%;
+    height: 100%;
+    text-transform: uppercase;
+    width: 100%;
+    margin:0;
+}
+
+.content-wrap h1.entry-title {
+    display: table;
+    font-size: 110%;
+    height: 100%;
+    text-transform: uppercase;
+    width: 100%;
+    margin:0;
+}
+
+.featured-image {
+    display: table-cell;
+    position: relative;
+    transition: opacity .25s ease-in-out, background .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out, background .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out, background .25s ease-in-out;
+    vertical-align: middle;
+    z-index: 1;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0;
+    padding: 10%;
+}
+.featured-image:hover {
+    opacity: 0.5;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    cursor:pointer;
+}
+
+.video-title{font-size:14px;
+    width:200px;
+    display:block;
+    overflow:hidden;
+    word-break:keep-all;
+    white-space:nowrap;
+    text-overflow:ellipsis;}

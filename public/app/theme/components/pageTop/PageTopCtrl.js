@@ -11,7 +11,6 @@
     function PageTopCtrl($scope, $http,toastr,layoutPaths) {
         $scope.imageUrl = '';
         $scope.isLogin = false;
-        debugger
         $http.get('/profiles/get').then(function (res) {
             if(res.data.code < 0 ){
                 $scope.isLogin = false;

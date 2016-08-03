@@ -1,27 +1,42 @@
 
 <div ng-repeat="doc in docs">
     <div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="">
-                    <img alt="{{doc.title}}" ng-click="onPlay(doc.id)" ng-src="{{doc.thumbnail}}">
-                </div>
-                <div class="">
-                    <a title="{{doc.title}}", target="_blank" href="#/home/playing/{{doc.id}}" >{{doc.title}}</a>
-                </div>
-                <div class="">
-                    <span>
-                        <a target="_blank" href="{{doc.user.link}}">{{doc.user.name}}</a>
-                    </span>
-                </div>
-                <div class="">
-                    <span>{{doc.view_count}}</span>
-                    <span>{{doc.published}}</span>
+        <!--<div class="row">-->
+            <div class="col-md-12 col-lg-4">
+                <div ba-panel ba-panel-class="xsmall-panel light-text">
+                    <a  target="_blank" href="#/home/playing/{{doc.id}}">
+                        <div >
+                            <div class="video">
+                                <img width="205px" height="105px"  alt="{{doc.title}}" ng-src="{{doc.thumbnail}}">
+                            </div>
+                            <div class="content-wrap">
+                                <h1 class="entry-title">
+                                    <div class="featured-image"><img width="35px" height="25px" src="img/player.png"></div>
+                                </h1>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div style="margin-top: 8px">
+                        <div class="">
+                            <a class="video-title"  style= "font-style:normal;color: black" title="{{doc.title}}", target="_blank" href="#/home/playing/{{doc.id}}" >{{doc.title}}</a>
+                        </div>
+                        <div class="" style="margin-top: 4px;" >
+                            <span>
+                                <a style="font-style:normal; color: black;font-size: small" target="_blank" href="{{doc.user.link}}">{{doc.user.name}}</a>
+                            </span>
+                        </div>
+                        <div class="" style="font-style:normal;margin-top: 4px;color: black;font-size: small">
+                            <span>{{doc.view_count}}</span>
+                            <span style="float: right">{{doc.published}}</span>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-        </div>
+        <!--</div>-->
     </div>
-    <hr>
 </div>
 
 
